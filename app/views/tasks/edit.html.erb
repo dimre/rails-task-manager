@@ -1,0 +1,15 @@
+<h1>Edit task</h1>
+  <%= form_for(@task) do |f| %>
+<div class="form-group">
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+<div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+</div>
+
+</div>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+<li><%= check_box_tag 'completed', 1, @task.completed %>Completed</li>
